@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c3e05cb6fa44b40b840b1a06f637ff, type: 3}
+  m_Name: PuzzleMoveDown
+  m_EditorClassIdentifier: 
+  _id: puzzle_move_down_01
+  _description: <color=#2492F3>Merge 2 items</color> to make an upgrade item
+  _offsetBetweenUITutorialInfoAndCenter: {x: 0, y: 500}
+  _showDescription: 1
+  _startPosition:
+    x: 3
+    y: 3
+  _endPosition:
+    x: 3
+    y: 4
+  _holeSize: {x: 200, y: 350}
+  _autoDetectStartItem: 0
+  _completeCondition: 0
+  _puzzleId: 

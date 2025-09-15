@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 774eb48ba99cc4a4e9147610c2420e29, type: 3}
+  m_Name: ClickStartInBuildPopup
+  m_EditorClassIdentifier: 
+  _id: click_start_in_build_popup
+  _description: 
+  _offsetBetweenUITutorialInfoAndCenter: {x: 0, y: 0}
+  _showDescription: 0
+  _showDescriptionWhenPlay: 0
+  _holeSize: {x: 350, y: 200}

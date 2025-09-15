@@ -1,0 +1,132 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1158963832894483298
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4424055767999799110}
+  m_Layer: 0
+  m_Name: candy_003_roll
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4424055767999799110
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158963832894483298}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2187178655808344613}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &6974416523467260719
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4424055767999799110}
+    m_Modifications:
+    - target: {fileID: -7263956994794051086, guid: 2419c36783cdf6e45b3e7da31e809f4e, type: 3}
+      propertyPath: titleAnim
+      value: candy_roll
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681474167328321267, guid: 2419c36783cdf6e45b3e7da31e809f4e, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681474167328321267, guid: 2419c36783cdf6e45b3e7da31e809f4e, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: 0.0000072717667
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681474167328321267, guid: 2419c36783cdf6e45b3e7da31e809f4e, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: 0.4725783
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681474167328321267, guid: 2419c36783cdf6e45b3e7da31e809f4e, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.000000834465
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681474167328321267, guid: 2419c36783cdf6e45b3e7da31e809f4e, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 1.7591982
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681474167328321267, guid: 2419c36783cdf6e45b3e7da31e809f4e, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.54519975
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681474167328321267, guid: 2419c36783cdf6e45b3e7da31e809f4e, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 1.7591982
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969196444115833398, guid: 2419c36783cdf6e45b3e7da31e809f4e, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 26379400da5a6564eb816e36a6a4b479, type: 2}
+    - target: {fileID: 8492558728016694192, guid: 2419c36783cdf6e45b3e7da31e809f4e, type: 3}
+      propertyPath: m_Name
+      value: candy_003
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119914067696570634, guid: 2419c36783cdf6e45b3e7da31e809f4e, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119914067696570634, guid: 2419c36783cdf6e45b3e7da31e809f4e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.47258556
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119914067696570634, guid: 2419c36783cdf6e45b3e7da31e809f4e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.47257254
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119914067696570634, guid: 2419c36783cdf6e45b3e7da31e809f4e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119914067696570634, guid: 2419c36783cdf6e45b3e7da31e809f4e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071059
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119914067696570634, guid: 2419c36783cdf6e45b3e7da31e809f4e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119914067696570634, guid: 2419c36783cdf6e45b3e7da31e809f4e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119914067696570634, guid: 2419c36783cdf6e45b3e7da31e809f4e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071077
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119914067696570634, guid: 2419c36783cdf6e45b3e7da31e809f4e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119914067696570634, guid: 2419c36783cdf6e45b3e7da31e809f4e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119914067696570634, guid: 2419c36783cdf6e45b3e7da31e809f4e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2419c36783cdf6e45b3e7da31e809f4e, type: 3}
+--- !u!4 &2187178655808344613 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9119914067696570634, guid: 2419c36783cdf6e45b3e7da31e809f4e, type: 3}
+  m_PrefabInstance: {fileID: 6974416523467260719}
+  m_PrefabAsset: {fileID: 0}

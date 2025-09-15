@@ -1,0 +1,192 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6817137746789032849
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4429927408144988882}
+  - component: {fileID: 4869959659493534090}
+  - component: {fileID: 8759789979770735193}
+  m_Layer: 5
+  m_Name: ImageCoinStar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4429927408144988882
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6817137746789032849}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7903688088428140834}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: -292, y: 677}
+  m_SizeDelta: {x: 86.91, y: 56.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &4869959659493534090
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6817137746789032849}
+  m_CullTransparentMesh: 1
+--- !u!114 &8759789979770735193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6817137746789032849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 794478f4a48dc4a1285635acfa86c149, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &7864078036600979340
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7903688088428140834}
+  - component: {fileID: 2733054970025130285}
+  m_Layer: 5
+  m_Name: UIGachaEffect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7903688088428140834
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7864078036600979340}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4429927408144988882}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2733054970025130285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7864078036600979340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 182a5b566aeda44a3acd6597a707259c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPersistent: 0
+  settings:
+  - id: star_coin
+    itemPrefab: {fileID: 6817137746789032849}
+    itemCountPerAmountSettings:
+    - minAmount: 1
+      countRange: {x: 1, y: 1}
+    - minAmount: 50
+      countRange: {x: 4, y: 6}
+    - minAmount: 100
+      countRange: {x: 6, y: 9}
+    - minAmount: 60
+      countRange: {x: 9, y: 12}
+    spreadRadiusRange: {x: 150, y: 300}
+    spreadDuration: 0.5
+    moveToTargetDuration: 0.9
+    offsetMoveToTargetDurationRange: {x: 0, y: 0.3}
+  - id: star_coin
+    itemPrefab: {fileID: 6817137746789032849}
+    itemCountPerAmountSettings:
+    - minAmount: 1
+      countRange: {x: 1, y: 1}
+    - minAmount: 50
+      countRange: {x: 3, y: 4}
+    - minAmount: 100
+      countRange: {x: 5, y: 8}
+    - minAmount: 60
+      countRange: {x: 9, y: 12}
+    spreadRadiusRange: {x: 150, y: 300}
+    spreadDuration: 0.5
+    moveToTargetDuration: 0.9
+    offsetMoveToTargetDurationRange: {x: 0, y: 0.3}
+  - id: exp
+    itemPrefab: {fileID: 0}
+    itemCountPerAmountSettings:
+    - minAmount: 1
+      countRange: {x: 1, y: 1}
+    - minAmount: 10
+      countRange: {x: 3, y: 4}
+    - minAmount: 30
+      countRange: {x: 5, y: 8}
+    - minAmount: 60
+      countRange: {x: 9, y: 12}
+    spreadRadiusRange: {x: 90, y: 180}
+    spreadDuration: 0.4
+    moveToTargetDuration: 0.9
+    offsetMoveToTargetDurationRange: {x: 0, y: 0.3}
+  parabolaEffectSettings:
+  - id: star_coin
+    itemPrefab: {fileID: 6817137746789032849}
+    moveDuration: 0.6
+    itemCountPerAmountSettings:
+    - minAmount: 1
+      countRange: {x: 1, y: 1}
+    - minAmount: 10
+      countRange: {x: 3, y: 5}
+    - minAmount: 30
+      countRange: {x: 5, y: 8}
+    - minAmount: 300
+      countRange: {x: 12, y: 15}
+    delayBetweenSpawn: 0.08
+    height: 200
+    rotateOvertimeModuleSetting:
+      enable: 1
+      speed: 50
+      counterClockwise: 1

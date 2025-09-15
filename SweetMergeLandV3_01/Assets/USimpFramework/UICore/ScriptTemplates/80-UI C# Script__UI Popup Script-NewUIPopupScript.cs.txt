@@ -1,0 +1,21 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using USimpFramework.UI;
+
+namespace TheKingOfMergeCity
+{
+    public class #SCRIPTNAME# : UIScalePopup
+    {
+        void Start()
+        {
+            #NOTRIM#
+        }
+
+        void Update()
+        {
+            #NOTRIM#
+        }
+    }
+}

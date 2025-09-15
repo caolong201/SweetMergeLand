@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 549eb78e6c2c7ba429ce2486b835fbfc, type: 3}
+  m_Name: ConfigPlayerLevel
+  m_EditorClassIdentifier: 
+  _items:
+  - _exp: 0
+    _currencyRewards: []
+    _puzzleRewardIds: []
+  - _exp: 0
+    _currencyRewards: []
+    _puzzleRewardIds: []
+  - _exp: 50
+    _currencyRewards:
+    - _amount: 30
+      _currencyType: 5
+    _puzzleRewardIds: []
+  - _exp: 150
+    _currencyRewards:
+    - _amount: 50
+      _currencyType: 5
+    _puzzleRewardIds: []
+  - _exp: 250
+    _currencyRewards:
+    - _amount: 50
+      _currencyType: 5
+    _puzzleRewardIds:
+    - creamy_tube
+  - _exp: 530
+    _currencyRewards:
+    - _amount: 60
+      _currencyType: 5
+    _puzzleRewardIds: []
+  - _exp: 720
+    _currencyRewards:
+    - _amount: 70
+      _currencyType: 5
+    _puzzleRewardIds: []
+  - _exp: 1350
+    _currencyRewards:
+    - _amount: 100
+      _currencyType: 5
+    _puzzleRewardIds: []
+  - _exp: 2000
+    _currencyRewards:
+    - _amount: 150
+      _currencyType: 5
+    _puzzleRewardIds: []
+  csvFile: {fileID: 4900000, guid: b7aa6f1963e0ac94e9d7d945ad075ae2, type: 3}

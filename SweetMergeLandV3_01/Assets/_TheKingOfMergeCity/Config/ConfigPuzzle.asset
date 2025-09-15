@@ -1,0 +1,173 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54679469567e448b9a75edd6290582ec, type: 3}
+  m_Name: ConfigPuzzle
+  m_EditorClassIdentifier: 
+  _boardSize: {x: 7, y: 9}
+  _boardSizePixelMin: {x: 886, y: 971}
+  _boardSizePixelMax: {x: 936, y: 1232}
+  _darkTileSprite: {fileID: 21300000, guid: c7544dff621c34f4e8c4f9cf1c682d7a, type: 3}
+  _lightTileSprite: {fileID: 21300000, guid: 1339c2ed3d218b14abd2d7e4a9418a8c, type: 3}
+  _rowPrefab: {fileID: 7382682968894014121, guid: b6662408ddfe5ed42a3b1092b849a54f, type: 3}
+  _tileImagePrefab: {fileID: 6324735088220850935, guid: d26c1c4de31749e4ebdcad93a83ab686, type: 3}
+  _configPuzzlePerTypes:
+  - _puzzleType: 0
+    _itemPrefab: {fileID: 6437138509754030515, guid: 182dcaeb0d778c24e8117b9bc0b72f78, type: 3}
+    _energyCostPerProduce: 1
+  - _puzzleType: 1
+    _itemPrefab: {fileID: 5191826485359280257, guid: 1a5fb9087db75ab47bb9f02b26d7b899, type: 3}
+    _energyCostPerProduce: 1
+  _configBlockingItems:
+  - _blockingSprites:
+    - {fileID: 21300000, guid: 3c750a35c3f8ceb409a066ec227d552c, type: 3}
+    - {fileID: 21300000, guid: 58491510065ca6c41a42966ea003ad10, type: 3}
+  - _blockingSprites:
+    - {fileID: 21300000, guid: 857c3968254c87547b7b4e9e5471ec65, type: 3}
+    - {fileID: 21300000, guid: 226769f997ae9ac42afc23277ed267f4, type: 3}
+    - {fileID: 21300000, guid: c1a883e8b61270141b4d9ad08a0cd20e, type: 3}
+  _configItems:
+  - _id: candy
+    _puzzleType: 0
+    _configPerLevel:
+    - _itemSprite: {fileID: 21300000, guid: 7001d4f28c5994e4f9a905235f99c95e, type: 3}
+      _sizeScale: -0.1
+    - _itemSprite: {fileID: 21300000, guid: 7cffe9d0b2a3841ae87ccc125f25d298, type: 3}
+      _sizeScale: -0.1
+    - _itemSprite: {fileID: 21300000, guid: bcc2f2d61e16f452c89590375064ccab, type: 3}
+      _sizeScale: 0
+    - _itemSprite: {fileID: 21300000, guid: 578c7190d9a104fe897dddb663098f18, type: 3}
+      _sizeScale: 0
+    - _itemSprite: {fileID: 21300000, guid: a26952b3ae29f4712a0614529789e32a, type: 3}
+      _sizeScale: 0
+    - _itemSprite: {fileID: 21300000, guid: 224fd1591e4fa402cab473661318f932, type: 3}
+      _sizeScale: 0
+    - _itemSprite: {fileID: 21300000, guid: 1f343d488387f2a48b0c211a3d4e2398, type: 3}
+      _sizeScale: -0.1
+    - _itemSprite: {fileID: 21300000, guid: a1e7b4d1ab25e714e997ad3e92fd1aa4, type: 3}
+      _sizeScale: 0
+    - _itemSprite: {fileID: 21300000, guid: d84a2349c349a400aa2887b77935dd84, type: 3}
+      _sizeScale: 0
+    _settingPerProducedItems: []
+  - _id: chocolate
+    _puzzleType: 0
+    _configPerLevel:
+    - _itemSprite: {fileID: 21300000, guid: 60d8aed57ff801044af2a9550c927c1f, type: 3}
+      _sizeScale: 0
+    - _itemSprite: {fileID: 21300000, guid: 82627ed6ac645864d8aea7ec3de2f83c, type: 3}
+      _sizeScale: 0
+    - _itemSprite: {fileID: 21300000, guid: 92708f0a29ebb724892123760e88406f, type: 3}
+      _sizeScale: 0
+    - _itemSprite: {fileID: 21300000, guid: 279ba533805163b48819a7d622ad9984, type: 3}
+      _sizeScale: 0
+    - _itemSprite: {fileID: 21300000, guid: dd44a471131a2d046bb152767e0f6c8c, type: 3}
+      _sizeScale: 0
+    - _itemSprite: {fileID: 21300000, guid: df1534fa9624f7a438c48e8aa5e1897a, type: 3}
+      _sizeScale: 0
+    - _itemSprite: {fileID: 21300000, guid: 0cd36c06c7bb8724a9514bfe241e23c5, type: 3}
+      _sizeScale: 0
+    - _itemSprite: {fileID: 21300000, guid: 4d468d9e808a33f4d9e7f1eb5c349e10, type: 3}
+      _sizeScale: 0
+    - _itemSprite: {fileID: 21300000, guid: 7766b2cdd4d15bd47a3803c878b34f61, type: 3}
+      _sizeScale: 0
+    - _itemSprite: {fileID: 21300000, guid: 05124f33382d34049a335c0e7fc4a1c2, type: 3}
+      _sizeScale: 0
+    _settingPerProducedItems: []
+  - _id: cookie
+    _puzzleType: 0
+    _configPerLevel:
+    - _itemSprite: {fileID: 21300000, guid: d08c1881e9a478e45aa6a8f05ceda6dd, type: 3}
+      _sizeScale: -0.1
+    - _itemSprite: {fileID: 21300000, guid: d4db4c91f3547f64998cbaf2f67b7a03, type: 3}
+      _sizeScale: -0.1
+    - _itemSprite: {fileID: 21300000, guid: 247e215259621bb40a8950f3321252b9, type: 3}
+      _sizeScale: -0.15
+    - _itemSprite: {fileID: 21300000, guid: 614cad288eccb12438ebed92c05c36f4, type: 3}
+      _sizeScale: -0.1
+    - _itemSprite: {fileID: 21300000, guid: f51de567dcd45714b80ca9f66261eede, type: 3}
+      _sizeScale: -0.1
+    - _itemSprite: {fileID: 21300000, guid: 766ba16d9b6f2534aa6ee33665461c63, type: 3}
+      _sizeScale: -0.1
+    - _itemSprite: {fileID: 21300000, guid: 86177509cad3d8042869cf5c7d0ee4d9, type: 3}
+      _sizeScale: -0.1
+    - _itemSprite: {fileID: 21300000, guid: b529b06d2a58dcc45b1a584c7b95ae6e, type: 3}
+      _sizeScale: -0.1
+    - _itemSprite: {fileID: 21300000, guid: e23536f47740b3f4d92fb87e8f9f31c4, type: 3}
+      _sizeScale: -0.1
+    - _itemSprite: {fileID: 21300000, guid: e33c2e6a164e5c242b55827327af8497, type: 3}
+      _sizeScale: -0.1
+    _settingPerProducedItems: []
+  - _id: chocolate_box
+    _puzzleType: 1
+    _configPerLevel:
+    - _itemSprite: {fileID: 21300000, guid: ec0e5b6388d0f0445b98a00af36145ac, type: 3}
+      _sizeScale: 0
+    - _itemSprite: {fileID: 21300000, guid: c4facd06a0fc9c94fad4fc97c70d4376, type: 3}
+      _sizeScale: 0
+    - _itemSprite: {fileID: 21300000, guid: e117b91891644ff469fb9b31dfaaf20d, type: 3}
+      _sizeScale: 0
+    - _itemSprite: {fileID: 21300000, guid: 87b58fb83f9df3946bac738ef9ac4f86, type: 3}
+      _sizeScale: 0
+    _settingPerProducedItems:
+    - id: chocolate
+      probability: 48
+    - id: cookie
+      probability: 30
+    - id: candy
+      probability: 0
+  - _id: cake
+    _puzzleType: 0
+    _configPerLevel:
+    - _itemSprite: {fileID: 21300000, guid: a2255653ddfd30f47934ced893c24b62, type: 3}
+      _sizeScale: -0.1
+    - _itemSprite: {fileID: 21300000, guid: cbd548324d7fed74e9ec255f6bc00e9b, type: 3}
+      _sizeScale: -0.1
+    - _itemSprite: {fileID: 21300000, guid: 14d018b5de3971144810bdbdc1459d3f, type: 3}
+      _sizeScale: -0.1
+    - _itemSprite: {fileID: 21300000, guid: eea336d5ad3dc4a2b8e883488b53fdd3, type: 3}
+      _sizeScale: -0.1
+    - _itemSprite: {fileID: 21300000, guid: 5177622349a1542839da24ebe6b1986f, type: 3}
+      _sizeScale: -0.1
+    - _itemSprite: {fileID: 21300000, guid: 13ae6c6a47fa56e4b905f3747f7c0e07, type: 3}
+      _sizeScale: -0.1
+    - _itemSprite: {fileID: 21300000, guid: 23e4957161a2ba54f9da2c87c466dcb7, type: 3}
+      _sizeScale: -0.1
+    _settingPerProducedItems: []
+  - _id: ice_cream
+    _puzzleType: 0
+    _configPerLevel:
+    - _itemSprite: {fileID: 21300000, guid: 57f9ea355e6ee4487a0eddc17bfb39b4, type: 3}
+      _sizeScale: -0.1
+    - _itemSprite: {fileID: 21300000, guid: df99519bd55ad40ad9a551206ab47da2, type: 3}
+      _sizeScale: -0.1
+    - _itemSprite: {fileID: 21300000, guid: 0dabbd60136224ee3a557fff510953c7, type: 3}
+      _sizeScale: -0.1
+    - _itemSprite: {fileID: 21300000, guid: e19f5e5a5cd5646148106b6b0edf2c7f, type: 3}
+      _sizeScale: -0.1
+    - _itemSprite: {fileID: 21300000, guid: 633f0da2e603e4907bb3b76487548ba1, type: 3}
+      _sizeScale: -0.1
+    _settingPerProducedItems: []
+  - _id: creamy_tube
+    _puzzleType: 1
+    _configPerLevel:
+    - _itemSprite: {fileID: 21300000, guid: 13f2a7f5620394affbde6fcd30789275, type: 3}
+      _sizeScale: -0.2
+    - _itemSprite: {fileID: 21300000, guid: 0507f9660909a415182feb1877a62f19, type: 3}
+      _sizeScale: -0.2
+    - _itemSprite: {fileID: 21300000, guid: abd5bd3a5d11d457e8cc73f14d9a2e8a, type: 3}
+      _sizeScale: -0.15
+    - _itemSprite: {fileID: 21300000, guid: df620658268084801b00d2dfcf762246, type: 3}
+      _sizeScale: 0
+    _settingPerProducedItems:
+    - id: cake
+      probability: 60
+    - id: ice_cream
+      probability: 0

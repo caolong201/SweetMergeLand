@@ -1,0 +1,32 @@
+<dependencies>
+  <packages>
+    <package>androidx.recyclerview:recyclerview:1.2.1</package>
+    <package>com.adjust.sdk:adjust-android:5.1.0</package>
+    <package>com.android.installreferrer:installreferrer:2.2</package>
+    <package>com.applovin.mediation:bytedance-adapter:7.3.0.5.0</package>
+    <package>com.applovin.mediation:facebook-adapter:[6.20.0.0]</package>
+    <package>com.applovin.mediation:google-adapter:[24.5.0.0]</package>
+    <package>com.applovin.mediation:ironsource-adapter:8.10.0.0.0</package>
+    <package>com.applovin.mediation:mintegral-adapter:16.9.91.0</package>
+    <package>com.applovin.mediation:unityads-adapter:4.16.0.0</package>
+    <package>com.applovin:applovin-sdk:13.3.1</package>
+    <package>com.google.android.gms:play-services-appset:16.0.2</package>
+    <package>com.google.android.instantapps:instantapps:1.1.0</package>
+  </packages>
+  <files />
+  <settings>
+    <setting name="androidAbis" value="arm64-v8a,armeabi-v7a" />
+    <setting name="bundleId" value="com.hipahipagames.pj000032" />
+    <setting name="explodeAars" value="True" />
+    <setting name="gradleBuildEnabled" value="True" />
+    <setting name="gradlePropertiesTemplateEnabled" value="True" />
+    <setting name="gradleTemplateEnabled" value="True" />
+    <setting name="installAndroidPackages" value="True" />
+    <setting name="localMavenRepoDir" value="Assets/GeneratedLocalRepo" />
+    <setting name="packageDir" value="Assets/Plugins/Android" />
+    <setting name="patchAndroidManifest" value="True" />
+    <setting name="patchMainTemplateGradle" value="True" />
+    <setting name="projectExportEnabled" value="False" />
+    <setting name="useJetifier" value="False" />
+  </settings>
+</dependencies>

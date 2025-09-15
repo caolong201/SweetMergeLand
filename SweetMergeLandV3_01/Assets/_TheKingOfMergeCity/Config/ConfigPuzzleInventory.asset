@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c987cbe5ee1b2c84cb331cad7cebe402, type: 3}
+  m_Name: ConfigPuzzleInventory
+  m_EditorClassIdentifier: 
+  _configSlots:
+  - _unlockCost: 0
+  - _unlockCost: 0
+  - _unlockCost: 0
+  - _unlockCost: 0
+  - _unlockCost: 0
+  - _unlockCost: 50
+  - _unlockCost: 60
+  - _unlockCost: 70
+  - _unlockCost: 80
+  - _unlockCost: 90
+  - _unlockCost: 100
+  - _unlockCost: 110
+  - _unlockCost: 120
+  - _unlockCost: 130
+  - _unlockCost: 140
+  - _unlockCost: 150
+  - _unlockCost: 160
+  - _unlockCost: 170
+  - _unlockCost: 180
+  - _unlockCost: 190
+  - _unlockCost: 200
+  - _unlockCost: 210
+  - _unlockCost: 220
+  - _unlockCost: 230
+  - _unlockCost: 240
+  - _unlockCost: 250
+  - _unlockCost: 260
+  - _unlockCost: 280
+  - _unlockCost: 290
+  - _unlockCost: 300
+  - _unlockCost: 310
+  - _unlockCost: 320
+  _slotPerRow: 4
+  _unlockInventoryAtLevel: 0

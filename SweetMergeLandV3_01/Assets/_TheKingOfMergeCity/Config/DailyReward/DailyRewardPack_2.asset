@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b76ed2fadb55815439fee38e73ec09d8, type: 3}
+  m_Name: DailyRewardPack_2
+  m_EditorClassIdentifier: 
+  _rewards:
+  - _rewardType: 2
+    _currencyType: 5
+    _puzzleId: 
+    _puzzleLevel: 0
+    _amount: 10
+    _isSpecial: 0
+  - _rewardType: 2
+    _currencyType: 4
+    _puzzleId: 
+    _puzzleLevel: 0
+    _amount: 10
+    _isSpecial: 0
+  - _rewardType: 2
+    _currencyType: 5
+    _puzzleId: 
+    _puzzleLevel: 0
+    _amount: 30
+    _isSpecial: 0
+  - _rewardType: 2
+    _currencyType: 4
+    _puzzleId: 
+    _puzzleLevel: 0
+    _amount: 20
+    _isSpecial: 0
+  - _rewardType: 1
+    _currencyType: 0
+    _puzzleId: cake
+    _puzzleLevel: 3
+    _amount: 1
+    _isSpecial: 0
+  - _rewardType: 2
+    _currencyType: 2
+    _puzzleId: 
+    _puzzleLevel: 0
+    _amount: 10
+    _isSpecial: 0
+  - _rewardType: 1
+    _currencyType: 0
+    _puzzleId: candy
+    _puzzleLevel: 5
+    _amount: 1
+    _isSpecial: 1

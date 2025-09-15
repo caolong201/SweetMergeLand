@@ -1,0 +1,353 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f86886d9ec82d7478ed3cb0428ea0ef, type: 3}
+  m_Name: ConfigArea
+  m_EditorClassIdentifier: 
+  _areaItems:
+  - _id: 0
+    _displayName: Ice Cream room
+    _iconSprite: {fileID: 21300000, guid: e2910523fbe5cfa458f72598d5e95293, type: 3}
+    _iconSpriteDisable: {fileID: 21300000, guid: e1be9d8c38703e146b2f47b3c727e0ec, type: 3}
+    _sceneAddress: Area_04
+    _decoItems:
+    - _id: ice_cream_table
+      _iconSprite: {fileID: 21300000, guid: e747ec88105284132841303632be59bf, type: 3}
+      _buildingCost: 40
+      _expReward: 5
+      _description: Place the table
+      _nextUnlockDecoIds:
+      - ice_cream_chair
+    - _id: ice_cream_chair
+      _iconSprite: {fileID: 21300000, guid: f0ee0ae85fcabc8408ab763c322856be, type: 3}
+      _buildingCost: 45
+      _expReward: 5
+      _description: Place the chair
+      _nextUnlockDecoIds:
+      - ice_cream_sign
+    - _id: ice_cream_sign
+      _iconSprite: {fileID: 21300000, guid: a86abf8f92da247f3b85a880f278075f, type: 3}
+      _buildingCost: 50
+      _expReward: 10
+      _description: Place the sign
+      _nextUnlockDecoIds:
+      - ice_cream_plant
+    - _id: ice_cream_plant
+      _iconSprite: {fileID: 21300000, guid: 2e3c1f567b2ce434baf4cb9896101cfc, type: 3}
+      _buildingCost: 80
+      _expReward: 15
+      _description: Place the plants
+      _nextUnlockDecoIds:
+      - ice_cream_cabinet
+    - _id: ice_cream_cabinet
+      _iconSprite: {fileID: 21300000, guid: d7bf4f19d7da94fe590736cc2db54bf8, type: 3}
+      _buildingCost: 40
+      _expReward: 20
+      _description: Place the cabinet
+      _nextUnlockDecoIds:
+      - ice_cream_bucket
+    - _id: ice_cream_bucket
+      _iconSprite: {fileID: 21300000, guid: 66eeafa70558b48808c4ba6699b3c513, type: 3}
+      _buildingCost: 30
+      _expReward: 25
+      _description: Place the ice cream bucket
+      _nextUnlockDecoIds:
+      - ice_cream_decoration
+    - _id: ice_cream_decoration
+      _iconSprite: {fileID: 21300000, guid: 431718e6538ff4281ac6502bc26e7a96, type: 3}
+      _buildingCost: 45
+      _expReward: 30
+      _description: Place ice cream decoration
+      _nextUnlockDecoIds:
+      - ice_cream_cabinet_1
+    - _id: ice_cream_cabinet_1
+      _iconSprite: {fileID: 21300000, guid: d280c12c872904dcf8fc44408f9029e6, type: 3}
+      _buildingCost: 120
+      _expReward: 35
+      _description: Place the ice cream cabinet
+      _nextUnlockDecoIds:
+      - ice_cream_computer_plant
+    - _id: ice_cream_computer_plant
+      _iconSprite: {fileID: 21300000, guid: 42a7a6fc8b79249fcbda10f850691a3e, type: 3}
+      _buildingCost: 130
+      _expReward: 40
+      _description: Place computer and plants
+      _nextUnlockDecoIds:
+      - ice_cream_cabinet_2
+    - _id: ice_cream_cabinet_2
+      _iconSprite: {fileID: 21300000, guid: 3eb3d355357a14fa8bf12272e32b22a9, type: 3}
+      _buildingCost: 140
+      _expReward: 45
+      _description: Place the cabinet
+      _nextUnlockDecoIds:
+      - ice_cream_cone_bowl
+    - _id: ice_cream_cone_bowl
+      _iconSprite: {fileID: 21300000, guid: 3593a8a2797434c30911b2597ce951b8, type: 3}
+      _buildingCost: 150
+      _expReward: 50
+      _description: Place ice cream cones and bowl
+      _nextUnlockDecoIds:
+      - ice_cream_machine
+    - _id: ice_cream_machine
+      _iconSprite: {fileID: 21300000, guid: 07e1127b5c4064a85a5ffd685f24020a, type: 3}
+      _buildingCost: 110
+      _expReward: 55
+      _description: Place ice cream machines
+      _nextUnlockDecoIds:
+      - ice_cream_sign_1
+    - _id: ice_cream_sign_1
+      _iconSprite: {fileID: 21300000, guid: a35db7ac55c0a421eb5ea98e720796f4, type: 3}
+      _buildingCost: 160
+      _expReward: 60
+      _description: Place the ice cream wall sign
+      _nextUnlockDecoIds:
+      - ice_cream_logo
+    - _id: ice_cream_logo
+      _iconSprite: {fileID: 21300000, guid: 627b686d0d4694d22a607f765ea66b6a, type: 3}
+      _buildingCost: 170
+      _expReward: 65
+      _description: Place the ice cream logo
+      _nextUnlockDecoIds:
+      - ice_cream_clock
+    - _id: ice_cream_clock
+      _iconSprite: {fileID: 21300000, guid: 2c927fff8029b4e24a9a341acb3c57fb, type: 3}
+      _buildingCost: 180
+      _expReward: 70
+      _description: Place the ice cream clock
+      _nextUnlockDecoIds:
+      - 
+    _workerModel: {fileID: 5875911200192654922, guid: b66f2b8a16d8696448ec3a4dc3346e92, type: 3}
+  - _id: 1
+    _displayName: Bread room
+    _iconSprite: {fileID: 21300000, guid: f78343ec733b569489b7634e28094e32, type: 3}
+    _iconSpriteDisable: {fileID: 21300000, guid: 7be1afe0e36244a498c75e7cb0b54780, type: 3}
+    _sceneAddress: Area_05
+    _decoItems:
+    - _id: bread_flower
+      _iconSprite: {fileID: 21300000, guid: d187912b8ce2f0b489eeb4758d707d48, type: 3}
+      _buildingCost: 185
+      _expReward: 5
+      _description: Place plants and flower
+      _nextUnlockDecoIds:
+      - bread_table_sign
+    - _id: bread_table_sign
+      _iconSprite: {fileID: 21300000, guid: 7973babab4124774396acbf29074427d, type: 3}
+      _buildingCost: 190
+      _expReward: 8
+      _description: Place the table sign
+      _nextUnlockDecoIds:
+      - bread_table_0
+    - _id: bread_table_0
+      _iconSprite: {fileID: 21300000, guid: ce54298ff0e558b4daaed4c69717e03a, type: 3}
+      _buildingCost: 195
+      _expReward: 12
+      _description: Place the table
+      _nextUnlockDecoIds:
+      - bread_dumpling
+    - _id: bread_dumpling
+      _iconSprite: {fileID: 21300000, guid: 4c3798038e98b1e4ba47023f49008197, type: 3}
+      _buildingCost: 205
+      _expReward: 14
+      _description: Make dumblings
+      _nextUnlockDecoIds:
+      - bread_and_croissant
+    - _id: bread_and_croissant
+      _iconSprite: {fileID: 21300000, guid: 21aed257299a92a40b3a549123f4825e, type: 3}
+      _buildingCost: 210
+      _expReward: 18
+      _description: Make bread and croissant
+      _nextUnlockDecoIds:
+      - bread_cabinet_0
+    - _id: bread_cabinet_0
+      _iconSprite: {fileID: 21300000, guid: 9e65077cd3ab0fa449405f41a331272b, type: 3}
+      _buildingCost: 210
+      _expReward: 20
+      _description: Place the cabinet
+      _nextUnlockDecoIds:
+      - bread_and_croissant_2
+    - _id: bread_and_croissant_2
+      _iconSprite: {fileID: 21300000, guid: 9e65077cd3ab0fa449405f41a331272b, type: 3}
+      _buildingCost: 215
+      _expReward: 24
+      _description: Place bread and croissant
+      _nextUnlockDecoIds:
+      - bread_bakery_shelf_0
+    - _id: bread_bakery_shelf_0
+      _iconSprite: {fileID: 21300000, guid: 5786b56be77091e40801488cb056f575, type: 3}
+      _buildingCost: 220
+      _expReward: 28
+      _description: Place the bakery shelf
+      _nextUnlockDecoIds:
+      - bread_on_shelf_0
+    - _id: bread_on_shelf_0
+      _iconSprite: {fileID: 21300000, guid: 24ef5caea51a0f04c9f46d9e5d05fea9, type: 3}
+      _buildingCost: 105
+      _expReward: 32
+      _description: Place breads on the shelf
+      _nextUnlockDecoIds:
+      - bread_bakery_shelf_1
+    - _id: bread_bakery_shelf_1
+      _iconSprite: {fileID: 21300000, guid: 5786b56be77091e40801488cb056f575, type: 3}
+      _buildingCost: 225
+      _expReward: 36
+      _description: Place the bakery shelf
+      _nextUnlockDecoIds:
+      - bread_on_shelf_1
+    - _id: bread_on_shelf_1
+      _iconSprite: {fileID: 21300000, guid: ac09d666565d7fa449d9f26721d1ce0e, type: 3}
+      _buildingCost: 110
+      _expReward: 40
+      _description: Place breads on the shelf
+      _nextUnlockDecoIds:
+      - bread_cabinet_2
+    - _id: bread_cabinet_2
+      _iconSprite: {fileID: 21300000, guid: 1a4291b58c42015449a21224fe9d873a, type: 3}
+      _buildingCost: 230
+      _expReward: 44
+      _description: Place the cabinet
+      _nextUnlockDecoIds:
+      - bread_scale
+    - _id: bread_scale
+      _iconSprite: {fileID: 21300000, guid: a145d19d93538f24d98207276453aa0d, type: 3}
+      _buildingCost: 235
+      _expReward: 48
+      _description: Place the scale
+      _nextUnlockDecoIds:
+      - bread_slice
+    - _id: bread_slice
+      _iconSprite: {fileID: 21300000, guid: 784b3363c16999c4d8552966caad0831, type: 3}
+      _buildingCost: 150
+      _expReward: 50
+      _description: Place breads on cabinet
+      _nextUnlockDecoIds:
+      - bread_logos
+    - _id: bread_logos
+      _iconSprite: {fileID: 21300000, guid: 0f080bfa543899f469ffc689bf670093, type: 3}
+      _buildingCost: 210
+      _expReward: 55
+      _description: Place the bread logos
+      _nextUnlockDecoIds:
+      - 
+    _workerModel: {fileID: 2236835776497154389, guid: 871a80d36f90e4dd9b4a6fdc68b307f8, type: 3}
+  - _id: 2
+    _displayName: Cafe room
+    _iconSprite: {fileID: 21300000, guid: 15ead0a57c9d0914886eb14eebaf36a0, type: 3}
+    _iconSpriteDisable: {fileID: 21300000, guid: a9f0fae9cfa37f04399ba10ab41ede20, type: 3}
+    _sceneAddress: Area_06
+    _decoItems:
+    - _id: cafe_table
+      _iconSprite: {fileID: 21300000, guid: f87a8272c91818847b77a8b8604f7bfc, type: 3}
+      _buildingCost: 215
+      _expReward: 5
+      _description: Place the table
+      _nextUnlockDecoIds:
+      - cafe_chair
+    - _id: cafe_chair
+      _iconSprite: {fileID: 21300000, guid: 5889abe61041e7e4aae3dc8ec373d958, type: 3}
+      _buildingCost: 220
+      _expReward: 8
+      _description: Place the chairs
+      _nextUnlockDecoIds:
+      - cafe_logo_carpet
+    - _id: cafe_logo_carpet
+      _iconSprite: {fileID: 21300000, guid: 932770beccf06bf46a9b0bc862681e4f, type: 3}
+      _buildingCost: 225
+      _expReward: 12
+      _description: Place the logo and carpet
+      _nextUnlockDecoIds:
+      - cafe_shelf
+    - _id: cafe_shelf
+      _iconSprite: {fileID: 21300000, guid: 5875ebcaf072d4545ba6d1f3081d370b, type: 3}
+      _buildingCost: 230
+      _expReward: 14
+      _description: Place the shelf
+      _nextUnlockDecoIds:
+      - cafe_coffee_bags
+    - _id: cafe_coffee_bags
+      _iconSprite: {fileID: 21300000, guid: ca7851a23656c85458757c08a5d064ba, type: 3}
+      _buildingCost: 235
+      _expReward: 18
+      _description: Place the coffee bags
+      _nextUnlockDecoIds:
+      - cafe_cabinet_0
+    - _id: cafe_cabinet_0
+      _iconSprite: {fileID: 21300000, guid: c510bfb60463bb248b7d29168d383be4, type: 3}
+      _buildingCost: 240
+      _expReward: 20
+      _description: Place the cabinet
+      _nextUnlockDecoIds:
+      - cafe_computer_plant
+    - _id: cafe_computer_plant
+      _iconSprite: {fileID: 21300000, guid: ff3e8c7d129677e4aa500429ba8a9958, type: 3}
+      _buildingCost: 245
+      _expReward: 24
+      _description: Place computer and plant
+      _nextUnlockDecoIds:
+      - cafe_coffe_cookies
+    - _id: cafe_coffe_cookies
+      _iconSprite: {fileID: 21300000, guid: 9f02233dcbd541141ac196a43baac236, type: 3}
+      _buildingCost: 250
+      _expReward: 28
+      _description: Place cofees and cookies
+      _nextUnlockDecoIds:
+      - cafe_cabinet_1
+    - _id: cafe_cabinet_1
+      _iconSprite: {fileID: 21300000, guid: a4f67efbc5c93b64fb8394fb0bca8172, type: 3}
+      _buildingCost: 255
+      _expReward: 32
+      _description: Place the cabinet
+      _nextUnlockDecoIds:
+      - cafe_cofee_cup
+    - _id: cafe_cofee_cup
+      _iconSprite: {fileID: 21300000, guid: a932f282ae5598e4d93b75454b41bccd, type: 3}
+      _buildingCost: 260
+      _expReward: 36
+      _description: Place coffee and cups
+      _nextUnlockDecoIds:
+      - cafe_tamper_chemex
+    - _id: cafe_tamper_chemex
+      _iconSprite: {fileID: 21300000, guid: 2ae08c0bfd831ef49b3e6af1116e6d52, type: 3}
+      _buildingCost: 265
+      _expReward: 40
+      _description: Place tamper and chemex
+      _nextUnlockDecoIds:
+      - cafe_coffee_machine
+    - _id: cafe_coffee_machine
+      _iconSprite: {fileID: 21300000, guid: ff3e8c7d129677e4aa500429ba8a9958, type: 3}
+      _buildingCost: 270
+      _expReward: 44
+      _description: Place the coffee machine
+      _nextUnlockDecoIds:
+      - cafe_cup_shelf
+    - _id: cafe_cup_shelf
+      _iconSprite: {fileID: 21300000, guid: 628734639a76fe74e89ce23712639e71, type: 3}
+      _buildingCost: 275
+      _expReward: 48
+      _description: Place shelf and cups
+      _nextUnlockDecoIds:
+      - cafe_coffee_bottle
+    - _id: cafe_coffee_bottle
+      _iconSprite: {fileID: 21300000, guid: 39f1921c23a11754782c02297e342449, type: 3}
+      _buildingCost: 280
+      _expReward: 50
+      _description: Place the coffee bottles
+      _nextUnlockDecoIds:
+      - cafe_coffee_sign
+    - _id: cafe_coffee_sign
+      _iconSprite: {fileID: 21300000, guid: 1c935ed05632d4743acf1b903897f3f8, type: 3}
+      _buildingCost: 285
+      _expReward: 55
+      _description: Place the coffee sign
+      _nextUnlockDecoIds:
+      - 
+    _workerModel: {fileID: 5875911200192654922, guid: b66f2b8a16d8696448ec3a4dc3346e92, type: 3}
+  csvConfigAreaDecoItems: {fileID: 4900000, guid: 9b02c03d636741c41be22f29cf4f0af1, type: 3}
+  csvConfigAreas: {fileID: 4900000, guid: 15fa1547d946f8240a849490cec7ac8c, type: 3}

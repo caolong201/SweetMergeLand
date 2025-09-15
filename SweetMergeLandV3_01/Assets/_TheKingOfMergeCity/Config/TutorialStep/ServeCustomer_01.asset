@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6297bae2a09aa4ffe9cd126634ea9a61, type: 3}
+  m_Name: ServeCustomer_01
+  m_EditorClassIdentifier: 
+  _id: serve_customer_01
+  _description: "We finished making the chocolate! Let\u2019s <color=#2492F3>Serve</color>
+    it to the customer"
+  _offsetBetweenUITutorialInfoAndCenter: {x: 0, y: 450}
+  _showDescription: 1
+  _showDescriptionWhenPlay: 1
+  _autoDetectServeCustomer: 1
+  _holeSize: {x: 300, y: 400}
+  _allowMovePuzzle: 0
+  _allowClickProducer: 0
