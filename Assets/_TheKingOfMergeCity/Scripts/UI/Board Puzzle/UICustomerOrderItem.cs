@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,6 +13,7 @@ namespace TheKingOfMergeCity
     using Config;
     using Enum;
     using Model;
+    using TMPro;
 
     public class UICustomerOrderItem : MonoBehaviour
     {
@@ -29,11 +30,13 @@ namespace TheKingOfMergeCity
         [SerializeField] ParticleSystem pendingServeFx;
         [SerializeField] ElasticScale customerScalePendingServe;
         [SerializeField] FloatingObject customerFloat;
-
+    
         [SerializeField] Button _serveButton;
         public Button serveButton => _serveButton;
 
-      
+        [SerializeField] TextMeshProUGUI pendingServeText;
+        [SerializeField] CanvasGroup pendingServeTextGroup;
+
         #region This for pooling
         List<UIFoodOrderItem> uiFoodOrderItems = new();
         List<UIRewardItem> uiRewardItems = new();
@@ -57,6 +60,7 @@ namespace TheKingOfMergeCity
         {
             uiFoodOrderItemPrefab.gameObject.SetActive(false);
             uiRewardItemPrefab.gameObject.SetActive(false);
+           
         }
 
         
@@ -132,6 +136,25 @@ namespace TheKingOfMergeCity
             puzzleItemsHasCompletedOrder.Clear();
             hasPendingServe = false;
             serveButton.gameObject.SetActive(false);
+
+            if (pendingServeTextGroup != null)
+            {
+                pendingServeTextGroup.DOKill();
+                pendingServeTextGroup.alpha = 1f;
+                pendingServeTextGroup.gameObject.SetActive(false);
+            }
+            else if (pendingServeText != null)
+            {
+                pendingServeText.gameObject.SetActive(false);
+            }
+
+            if (pendingServeFx != null)
+            {
+                pendingServeFx.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+                pendingServeFx.gameObject.SetActive(false);
+            }
+
+
         }
 
         public void SmoothTransition(float duration = 0.2f)
@@ -234,6 +257,26 @@ namespace TheKingOfMergeCity
 
             customerFloat.BackDefault();
             customerFloat.enabled = false;
+
+
+            if (pendingServeFx != null)
+            {
+                pendingServeFx.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+                pendingServeFx.gameObject.SetActive(false);
+            }
+            // also stop text
+            if (pendingServeTextGroup != null)
+            {
+                pendingServeTextGroup.DOKill();
+                pendingServeTextGroup.gameObject.SetActive(false);
+            }
+            else if (pendingServeText != null)
+            {
+                pendingServeText.DOKill();
+                pendingServeText.gameObject.SetActive(false);
+            }
+
+
 
             var configRewards = new List<ConfigRewardItem>();
             var userManager = UserManager.Instance;
@@ -433,7 +476,7 @@ namespace TheKingOfMergeCity
             {
                 //Scale elastic to highlight
                 customerScalePendingServe.Play();
-
+              
                 pendingServeFx.gameObject.SetActive(true);
                 pendingServeFx.Play();
                 serveButton.transform.localScale = Vector3.zero;
@@ -442,6 +485,22 @@ namespace TheKingOfMergeCity
                     serveButton.image.DOColor(new Color32(176, 176, 176, 255), 0.8f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.Linear);
                     serveButton.transform.DOScale(1.2f, 0.8f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.Linear);
                 });
+
+
+
+                if (pendingServeTextGroup != null)
+                {
+                    pendingServeTextGroup.gameObject.SetActive(true);
+                    pendingServeTextGroup.alpha = 1f;
+                    pendingServeTextGroup.DOFade(0.15f, 0.6f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.Linear);
+                }
+                else if (pendingServeText != null)
+                {
+                    pendingServeText.gameObject.SetActive(true);
+                  
+                    pendingServeText.DOFade(0.15f, 0.6f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.Linear);
+                }
+
 
                 puzzleItemsHasCompletedOrder.ForEach(h => h.SetPendingServe(true));
                 customerFloat.enabled = true;
@@ -463,10 +522,30 @@ namespace TheKingOfMergeCity
                 serveButton.transform.DOKill();
                 serveButton.transform.DOPopOut(0.2f);
                 puzzleItemsHasCompletedOrder.ForEach(h => h.SetPendingServe(false));
-
                 customerFloat.BackDefault();
                 customerFloat.enabled = false;
+
+
+                if (pendingServeFx != null)
+                {
+                    pendingServeFx.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+                    pendingServeFx.gameObject.SetActive(false);
+                }
+
+                if (pendingServeTextGroup != null)
+                {
+                    pendingServeTextGroup.DOKill();
+                    pendingServeTextGroup.alpha = 1f;
+                    pendingServeTextGroup.gameObject.SetActive(false);
+                }
+                else if (pendingServeText != null)
+                {
+                    pendingServeText.DOKill();
+                    pendingServeText.gameObject.SetActive(false);
+                }
             }
+
+           
         }
 
        
@@ -479,6 +558,10 @@ namespace TheKingOfMergeCity
             serveButton.image.DOKill();
             serveButton.transform.DOKill();
             rewardContainerTrans.DOKill();
+
+
+            if (pendingServeTextGroup != null) pendingServeTextGroup.DOKill();
+            if (pendingServeText != null) pendingServeText.DOKill();
         }
     }
 }

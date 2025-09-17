@@ -217,7 +217,7 @@ Material:
     - _AdvancedDissolveCutoutGeometric3Position: {r: 0, g: 0, b: 0, a: 0}
     - _AdvancedDissolveCutoutGeometric4Normal: {r: 1, g: 0, b: 0, a: 0}
     - _AdvancedDissolveCutoutGeometric4Position: {r: 0, g: 0, b: 0, a: 0}
-    - _AdvancedDissolveCutoutGeometricXYZPosition: {r: -2.636234, g: 2.343409, b: 2.8995347, a: 0}
+    - _AdvancedDissolveCutoutGeometricXYZPosition: {r: -3.698234, g: 1.3884091, b: 2.8995347, a: 0}
     - _AdvancedDissolveCutoutStandardMap1Offset: {r: 0, g: 0, b: 0, a: 0}
     - _AdvancedDissolveCutoutStandardMap1Scroll: {r: 0, g: 0, b: 0, a: 0}
     - _AdvancedDissolveCutoutStandardMap1Tiling: {r: 1, g: 1, b: 1, a: 0}
