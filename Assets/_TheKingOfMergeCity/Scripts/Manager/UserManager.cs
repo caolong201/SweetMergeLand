@@ -22,6 +22,8 @@ namespace TheKingOfMergeCity
         public event Action onPlayerLevelUp;
         public event Action onDailyRewardClaimed;
 
+
+        public event Action onInventoryChanged;
         public int currentBoardLevel { get; private set; } = 0;
 
         public PlayerPrefsTypeCollection<UserCurrencyItem> userCurrencies { get; private set; } = new("userCurrencies");
@@ -75,12 +77,27 @@ namespace TheKingOfMergeCity
 
         IgnoreSaveDataToken ignoreWhenHasNotFinishTutorial;
 
-        public void Init()
+
+        void NotifyInventoryChanged()
+        {
+            try
+            {
+                onInventoryChanged?.Invoke();
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError("Error while invoking onInventoryChanged: " + ex);
+            }
+        }
+
+            public void Init()
         {
             //Just for testing
             currentBoardLevel = 4;
 
             finishTutorial.LoadData();
+                
+            puzzleInventoryItems.LoadData();
 
             if (ConfigManager.Instance.configGlobal.skipTutorial)
                 finishTutorial.value = true;
@@ -174,6 +191,9 @@ namespace TheKingOfMergeCity
                 }
 
                 puzzleInventoryItems.SaveData();
+
+
+                NotifyInventoryChanged();
             }
 
             InitDailyReward();
@@ -649,6 +669,7 @@ namespace TheKingOfMergeCity
 
             emptySlot.SetPuzzle(puzzleId, puzzleLevel);
             puzzleInventoryItems.SaveData();
+            NotifyInventoryChanged();
             isSuccess = true;
         }
 
@@ -661,6 +682,9 @@ namespace TheKingOfMergeCity
 
 
             slot.SetPuzzle("", -1);
+
+            NotifyInventoryChanged();
+
             puzzleInventoryItems.SaveData();
         }
 

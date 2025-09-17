@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using USimpFramework.UI;
@@ -53,6 +53,8 @@ namespace TheKingOfMergeCity
         [SerializeField] UIParticle itemMergedVfx;
 
         [SerializeField] Button _inventoryButton;
+
+        [SerializeField] TMP_Text quantityInventory;
         public Button inventoryButton => _inventoryButton;
     
         void Start()
@@ -62,6 +64,7 @@ namespace TheKingOfMergeCity
             imageSelectorOriginalParentTrans = imageSelector.transform.parent;
             tileBgImagePrefab.gameObject.SetActive(false);
             CreateBackground();
+            
         }
 
 
@@ -88,10 +91,12 @@ namespace TheKingOfMergeCity
 
             BootManager.Instance.onBeforeSceneLoaded -= OnBeforeSceneLoaded;
             BootManager.Instance.onBeforeSceneLoaded += OnBeforeSceneLoaded;
-            
-            
+
+            UserManager.Instance.onInventoryChanged += UpdateInventory;
+
             //Reupdate the external reward puzzle items
             UpdateExtenalRewardPuzzleItems();
+            UpdateInventory();
         }
         void OnBeforeSceneLoaded(string sceneName)
         {
@@ -99,7 +104,20 @@ namespace TheKingOfMergeCity
                 ShowSelectorIndicator(false, imageSelectorOriginalParentTrans);
         }
 
+        void UpdateInventory()
+        {
+            var slotDataItems = UserManager.Instance.puzzleInventoryItems;
+            int total = slotDataItems.Count;
+            int occupied = 0;
+            foreach (var slot in slotDataItems)
+            {
+                if (!string.IsNullOrEmpty(slot.puzzleId))
+                    occupied++;
+            }
 
+            quantityInventory.text = $"{occupied}/{total}";
+            quantityInventory.gameObject.SetActive(total > 0);
+        }    
         void UpdateExtenalRewardPuzzleItems()
         {
             var externalPuzzleItems = UserManager.Instance.externalPuzzleItems;
