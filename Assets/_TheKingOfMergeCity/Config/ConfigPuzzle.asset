@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54679469567e448b9a75edd6290582ec, type: 3}
   m_Name: ConfigPuzzle
   m_EditorClassIdentifier: 
-  _boardSize: {x: 7, y: 9}
+  _boardSize: {x: 7, y: 7}
   _boardSizePixelMin: {x: 886, y: 971}
-  _boardSizePixelMax: {x: 936, y: 1232}
+  _boardSizePixelMax: {x: 1080, y: 1232}
   _darkTileSprite: {fileID: 21300000, guid: c7544dff621c34f4e8c4f9cf1c682d7a, type: 3}
   _lightTileSprite: {fileID: 21300000, guid: 1339c2ed3d218b14abd2d7e4a9418a8c, type: 3}
   _rowPrefab: {fileID: 7382682968894014121, guid: b6662408ddfe5ed42a3b1092b849a54f, type: 3}
