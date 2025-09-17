@@ -1,14 +1,14 @@
 {
   "dependencies": {
     "com.applovin.mediation.adapters.bytedance.android": {
-      "version": "703000500.0.0",
+      "version": "706000200.0.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://unity.packages.applovin.com"
     },
     "com.applovin.mediation.adapters.bytedance.ios": {
-      "version": "704010000.0.0",
+      "version": "706000400.0.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
@@ -29,28 +29,28 @@
       "url": "https://unity.packages.applovin.com"
     },
     "com.applovin.mediation.adapters.google.android": {
-      "version": "24050000.0.0",
+      "version": "24060000.0.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://unity.packages.applovin.com"
     },
     "com.applovin.mediation.adapters.google.ios": {
-      "version": "12080000.0.0",
+      "version": "12110000.0.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://unity.packages.applovin.com"
     },
     "com.applovin.mediation.adapters.ironsource.android": {
-      "version": "810000000.0.0",
+      "version": "811010000.0.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://unity.packages.applovin.com"
     },
     "com.applovin.mediation.adapters.ironsource.ios": {
-      "version": "810000000.0.0",
+      "version": "811000000.0.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
@@ -71,21 +71,21 @@
       "url": "https://unity.packages.applovin.com"
     },
     "com.applovin.mediation.adapters.unityads.android": {
-      "version": "4160000.0.0",
+      "version": "4160100.0.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://unity.packages.applovin.com"
     },
     "com.applovin.mediation.adapters.unityads.ios": {
-      "version": "4160000.0.0",
+      "version": "4160100.0.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://unity.packages.applovin.com"
     },
     "com.applovin.mediation.ads": {
-      "version": "8.3.1",
+      "version": "8.4.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {
