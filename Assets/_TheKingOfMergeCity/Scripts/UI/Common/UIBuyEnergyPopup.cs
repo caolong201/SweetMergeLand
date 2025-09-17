@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -45,6 +45,29 @@ namespace TheKingOfMergeCity
            
         }
         
+
+        public void useDiamonds()
+        {
+            int gemCost = 10;         
+            int recoverEnergy = 100;  
+
+            int currentGem = UserManager.Instance.GetCurrencyBalance(CurrencyType.Gem);
+
+            if (currentGem < gemCost)
+            {
+                UIManager.Instance.ShowFloatingText("Not enough Gems!");
+                return;
+            }
+            UserManager.Instance.AddCurrencyAmount(CurrencyType.Gem, -gemCost, true, true);
+            UserManager.Instance.AddCurrencyAmount(CurrencyType.Energy, recoverEnergy, true, true);
+            var uiIngameView = UIManager.Instance.currentView as UIInGameView;
+            if (uiIngameView != null)
+            {
+                var uiTopbar = uiIngameView.uiTopBar;
+                uiTopbar.PlayCurrencyGachaEffect(CurrencyType.Energy, recoverEnergy, energyImage.transform.position);
+            }
+            //UIManager.Instance.HidePopup(this);
+        }
         public void PressClose()
         {
             UIManager.Instance.HidePopup(this);

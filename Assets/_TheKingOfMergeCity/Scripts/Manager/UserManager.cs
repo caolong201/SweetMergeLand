@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System;
 
@@ -231,6 +231,11 @@ namespace TheKingOfMergeCity
             //Check reset roulette spin (DO NOT save data here)
             var configRoulette = ConfigManager.Instance.configRoulette;
             rouletteData.value.CheckReset(configRoulette.watchAdSpinCount, configRoulette.resetCooldownSecond);
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                AddCurrencyAmount(CurrencyType.Gem, 100, true, true);
+      
+            }
         }
 
         public void SaveAll()

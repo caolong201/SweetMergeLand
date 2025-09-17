@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System;
 
@@ -198,6 +198,8 @@ namespace TheKingOfMergeCity
                 var remainingTimeOffset = DateTimeOffset.FromUnixTimeMilliseconds(roulette.GetRemainingCooldownResetMs());
                 recoverText.text = $"Reset in {remainingTimeOffset.Hour}h {remainingTimeOffset.Minute}m {remainingTimeOffset.Second}s";
             }
+          
+
 
             var configRoulette = ConfigManager.Instance.configRoulette;
 
@@ -389,6 +391,9 @@ namespace TheKingOfMergeCity
             }
         }
 
+
+
+
         public void PressStop()
         {
             isSpinning = false;
@@ -411,4 +416,8 @@ namespace TheKingOfMergeCity
         }
 
     }
+
+
+
+
 }

@@ -10,7 +10,7 @@ using USimpFramework.Animation.DOTweenExtension;
 namespace TheKingOfMergeCity
 {
     using Enum;
-    
+
     public class UIHomeView : UIViewBase
     {
         [Header("Home")]
@@ -38,7 +38,7 @@ namespace TheKingOfMergeCity
 
         [Header("Area selection")]
         [SerializeField] UIAreaSelectPopup uiAreaSelectPopup;
-        
+
         public UITopBar uiTopBar => _uiTopBar;
 
         Vector2 originalGroupBottomPos;
@@ -48,19 +48,24 @@ namespace TheKingOfMergeCity
 
         float selectedWidth;
         float unSelectedWidth;
-        
+
         void Start()
         {
             notiTrans.DOScale(1.3f, 1f).SetEase(Ease.Linear).SetLoops(-1, LoopType.Yoyo);
             dailyRewardNotiTrans.DOScale(1.3f, 1f).SetEase(Ease.Linear).SetLoops(-1, LoopType.Yoyo);
         }
-
         void OnDestroy()
         {
             notiTrans.DOKill();
             dailyRewardNotiTrans.DOKill();
         }
-
+        public void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.L))
+            {           
+                    PressRoulette();             
+            }
+        }
         public override void Show(bool withTransition = true, System.Action onCompleted = null)
         {
             base.Show(withTransition, onCompleted);
@@ -88,17 +93,17 @@ namespace TheKingOfMergeCity
             OnLoadAreaCompleted();
             OnCurrencyBalanceChanged(CurrencyType.Star);
             OnPlayerLevelUp();
-            
+
             //Delay a bit to let the layout group to calculate the size of each element (so we don't have to calculate it ourselves)
             DOVirtual.DelayedCall(0.05f, () =>
             {
                 if (selectedWidth > 0)
                     return;
-                
+
                 selectedWidth = (uiMenuTabView.selectedButton.transform as RectTransform).GetWidth();
                 unSelectedWidth = (uiMenuTabView.tabButtons[0].transform as RectTransform).GetWidth();
                 uiMenuTabView.selectedButton.SetWidthLayout(selectedWidth);
-                
+
                 //Then disable the child control width to control the size of each element ourselves
                 uiMenuTabView.GetComponent<HorizontalLayoutGroup>().childControlWidth = false;
             });
@@ -141,7 +146,7 @@ namespace TheKingOfMergeCity
         void OnPlayerLevelUp()
         {
             var userManager = UserManager.Instance;
-           
+
             dailyRewardButton.gameObject.SetActive(false);
             dailyRewardNotiTrans.gameObject.SetActive(false);
 
@@ -158,7 +163,7 @@ namespace TheKingOfMergeCity
                     dailyRewardButton.transform.DOPopIn(0.5f, 1);
                 }
             }
-            
+
             rouletteButton.gameObject.SetActive(false);
             if (userManager.currentPlayerLevel >= ConfigManager.Instance.configRoulette.unlockAtPlayerLevel)
             {
@@ -247,9 +252,9 @@ namespace TheKingOfMergeCity
         void OnSelectTabButtonChanged(UIMenuTabButton oldTabButton)
         {
             if (oldTabButton != null)
-                oldTabButton.SetWidthLayout(unSelectedWidth,true);
-            
-            uiMenuTabView.selectedButton.SetWidthLayout(selectedWidth,true);
+                oldTabButton.SetWidthLayout(unSelectedWidth, true);
+
+            uiMenuTabView.selectedButton.SetWidthLayout(selectedWidth, true);
 
             int index = uiMenuTabView.tabButtons.IndexOf(uiMenuTabView.selectedButton);
 
@@ -289,7 +294,7 @@ namespace TheKingOfMergeCity
                 userManager.onDailyRewardClaimed -= OnDailyRewardClaimed;
             }
         }
-       
+
         public void ShowGroupInteractableButton(bool isShowing)
         {
             float moveDuration = 0.8f;
@@ -320,7 +325,7 @@ namespace TheKingOfMergeCity
             UserManager.Instance.CheckCanBuildDeco(out var areaId, out var decoId);
             notiTrans.gameObject.SetActive(areaId >= 0 && !string.IsNullOrEmpty(decoId));
         }
-        
+
         void OnAreaCompleted()
         {
             uiAreaCompleted.Show(HomeManager.Instance.currentConfigArea.id + 1);
@@ -349,7 +354,7 @@ namespace TheKingOfMergeCity
             var data = UserManager.Instance.currentSelectAreaData;
             var configDecoItems = HomeManager.Instance.currentConfigArea.decoItems;
             var nextBuildingDecoId = configDecoItems[Mathf.Min(configDecoItems.Count - 1, data.completedDecoIds.Count)].id;
-            uiDecoBuildPopup.UpdateState(data.areaId,  nextBuildingDecoId);
+            uiDecoBuildPopup.UpdateState(data.areaId, nextBuildingDecoId);
         }
 
         public void PressDecoCost(UIDecoCost uiDecoCost)
@@ -370,6 +375,6 @@ namespace TheKingOfMergeCity
             UIManager.Instance.ShowPopup<UIRoulettePopup>();
         }
 
-       
+
     }
 }
