@@ -6,9 +6,10 @@ using USimpFramework.UI;
 using System;
 
 namespace TheKingOfMergeCity
-{ 
+{
     using Tutorial;
     using Config;
+
     public class TutorialManager : SimpleSingleton<TutorialManager>
     {
         public event Action onStepPlayed;
@@ -16,6 +17,7 @@ namespace TheKingOfMergeCity
         public TutorialStep currentStep { get; private set; }
 
         List<TutorialStep> steps = new();
+
         public void SetStep(TutorialStep step)
         {
             currentStep = step;
@@ -23,9 +25,11 @@ namespace TheKingOfMergeCity
 
 
         #region Solution
+
         //Todo: How to handle that the data for complete process will always happen immediately when complete the step
         //Making the PreCompleteStep() -> save all the data, and handle logic immdiately,
         //CompleteStep() -> Wait for all association transition to complete, then complete -> check for showing the next step
+
         #endregion
 
         protected override void Awake()
@@ -55,7 +59,6 @@ namespace TheKingOfMergeCity
 
             if (steps.Count > 0)
                 currentStep = steps[0];
-
         }
 
         void OnDestroy()
@@ -65,7 +68,7 @@ namespace TheKingOfMergeCity
 
             BootManager.Instance.onAfterSceneLoaded -= OnSceneChanged;
         }
-        
+
         void OnSceneChanged(string sceneName)
         {
             if (sceneName == SceneConstants.IN_GAME_SCENE_NAME && !UserManager.Instance.finishTutorial)
@@ -73,7 +76,7 @@ namespace TheKingOfMergeCity
                 InGameManager.Instance.puzzlesController.onPuzzleMerged += OnPuzzleMerged;
             }
         }
-        
+
         void OnPuzzleMerged(UIPuzzleItemController puzzleItem)
         {
             var config = currentStep.config;
@@ -83,14 +86,16 @@ namespace TheKingOfMergeCity
                 var puzzleController = InGameManager.Instance.puzzlesController;
                 var endItem = puzzleController.GetPuzzleItem(configTutorialPuzzleMove.endPosition);
                 endItem.SetRaycastTarget(true);
-                if (configTutorialPuzzleMove.completeCondition == ConfigTutorialPuzzleMove.CompleteCondition.ByEndPosition)
+                if (configTutorialPuzzleMove.completeCondition ==
+                    ConfigTutorialPuzzleMove.CompleteCondition.ByEndPosition)
                 {
                     if (endItem == puzzleItem)
                     {
                         CompleteStep();
                     }
                 }
-                else if (configTutorialPuzzleMove.completeCondition == ConfigTutorialPuzzleMove.CompleteCondition.ByItemId)
+                else if (configTutorialPuzzleMove.completeCondition ==
+                         ConfigTutorialPuzzleMove.CompleteCondition.ByItemId)
                 {
                     if (puzzleItem.config.id == configTutorialPuzzleMove.puzzleId)
                     {
@@ -103,6 +108,7 @@ namespace TheKingOfMergeCity
         public void PlayStep()
         {
             var config = currentStep.config;
+            Debug.LogError("PlayStep: " + config.id);
             //them
             var uiPopup = UIManager.Instance.GetPopup<UITutorialPopup>();
             if (uiPopup == null) return;
@@ -111,10 +117,12 @@ namespace TheKingOfMergeCity
             {
                 uiPopup.ShowEffect();
             }
+
             //Check for each type of config tutorial step
             if (config is ConfigTutorialPuzzleMove configTutorialPuzzleMove)
             {
-                var secondItem = InGameManager.Instance.puzzlesController.GetPuzzleItem(configTutorialPuzzleMove.endPosition);
+                var secondItem =
+                    InGameManager.Instance.puzzlesController.GetPuzzleItem(configTutorialPuzzleMove.endPosition);
                 if (secondItem != null)
                 {
                     secondItem.SetRaycastTarget(false);
@@ -126,7 +134,8 @@ namespace TheKingOfMergeCity
                 var item = puzzleController.GetPuzzleItem(configClickProducePuzzle.clickPosition);
                 if (item == null || item is not UIPuzzleProducerController producerItem || !producerItem.canProduce)
                 {
-                    Debug.LogError($"This board position {configClickProducePuzzle.clickPosition} can have producer item!");
+                    Debug.LogError(
+                        $"This board position {configClickProducePuzzle.clickPosition} can have producer item!");
                     return;
                 }
 
@@ -136,13 +145,13 @@ namespace TheKingOfMergeCity
             var uiTutorialPopup = UIManager.Instance.GetPopup<UITutorialPopup>();
 
             if (uiTutorialPopup == null)
-               throw new UnityException("Something went wrong! Tutoiral Popup is no spawn yet!");
+                throw new UnityException("Something went wrong! Tutoiral Popup is no spawn yet!");
 
             if (config.showDescriptionWhenPlay)
             {
                 uiTutorialPopup.ShowEffect();
             }
-            
+
             if (config is ConfigServeCustomer configServeCustomer)
             {
                 if (configServeCustomer.allowMovePuzzle)
@@ -151,12 +160,12 @@ namespace TheKingOfMergeCity
                     uiTutorialPopup.ShowMaskBg(false);
                 }
             }
-           
+
 
             onStepPlayed?.Invoke();
         }
 
-        public void CheckCompleteStep<T>() where T: ConfigTutorialStep
+        public void CheckCompleteStep<T>() where T : ConfigTutorialStep
         {
             if (UserManager.Instance.finishTutorial)
                 return;
@@ -175,7 +184,7 @@ namespace TheKingOfMergeCity
             {
                 producePuzzleTutorialStep.clickCount++;
                 var config = producePuzzleTutorialStep.config as ConfigTutorialClickProducePuzzle;
-               
+
                 if (producePuzzleTutorialStep.clickCount == config.forceProduceItem.Count)
                 {
                     var uiProducer = InGameManager.Instance.puzzlesController.GetPuzzleItem(config.clickPosition);
@@ -185,7 +194,6 @@ namespace TheKingOfMergeCity
                     }
 
                     CompleteStep();
-
                 }
             }
             else if (currentStep.config is ConfigServeCustomer configServeCustomer)
@@ -205,17 +213,17 @@ namespace TheKingOfMergeCity
 
         void CompleteStep()
         {
-            //Debug.Log("Complete step: " + currentStep.config.id);
+            Debug.Log("Complete step: " + currentStep.config.id);
             int stepIndex = steps.IndexOf(currentStep);
-            if (stepIndex == steps.Count - 1)
+            if (stepIndex == steps.Count - 2)
             {
                 FinishTutorial();
             }
             else
             {
                 var uiTutorialPopup = UIManager.Instance.currentPopup as UITutorialPopup;
-                uiTutorialPopup.HideEffect();
-                
+                if (uiTutorialPopup != null) uiTutorialPopup.HideEffect();
+
                 onStepCompleted?.Invoke();
 
                 //Go to next step
@@ -226,6 +234,7 @@ namespace TheKingOfMergeCity
 
         void FinishTutorial()
         {
+            Debug.LogError("FinishTutorial");
             //Save all related data
             UserManager.Instance.SaveAll();
 
@@ -240,6 +249,7 @@ namespace TheKingOfMergeCity
         void Update()
         {
             #region Testing show tutorial popup
+
             /*if (Input.GetKeyDown(KeyCode.S))
             {
                 UIManager.Instance.ShowPopup<UITutorialPopup>();
@@ -248,6 +258,7 @@ namespace TheKingOfMergeCity
             {
                 UIManager.Instance.HidePopup<UITutorialPopup>();
             }*/
+
             #endregion
         }
     }
@@ -271,7 +282,6 @@ namespace TheKingOfMergeCity.Tutorial
     {
         public NormalTutorialStep(ConfigTutorialStep configTutorialStep) : base(configTutorialStep)
         {
-
         }
     }
 
@@ -282,7 +292,6 @@ namespace TheKingOfMergeCity.Tutorial
 
         public ClickProducePuzzleTutorialStep(ConfigTutorialStep configTutorialStep) : base(configTutorialStep)
         {
-
         }
 
         public ConfigOrderItem GetCurrentConfigItem()

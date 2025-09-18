@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: ClickBuyEnergy_03
   m_EditorClassIdentifier: 
   _id: ClickBuyEnergy_03
-  _description: 'Oh no! We''ve run out of energy! Tap the Energy icon!
+  _description: 'Oh no! We''ve run out of energy! <color=#2492F3>Tap the Energy icon!</color>
 
-    <color=#2492F3>Serve</color>
-    it to the customer'
+'
   _offsetBetweenUITutorialInfoAndCenter: {x: 0, y: 0}
   _showDescription: 1
   _showDescriptionWhenPlay: 1

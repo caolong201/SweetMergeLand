@@ -60,7 +60,6 @@ namespace TheKingOfMergeCity
         [SerializeField] Button _energyButton;
         public Button energyButton => _energyButton;
       
-        bool hasShownEnergyTutorial = false;
         void Start()
         {
             boardFullText.gameObject.SetActive(false);
@@ -203,11 +202,10 @@ namespace TheKingOfMergeCity
         {
             int energy = UserManager.Instance.GetCurrencyBalance(CurrencyType.Energy);
 
-            if (energy == 0)
+            if (energy <= 0)
             {
                 if (!UserManager.Instance.hasShownEnergyTutorial)
                 {
-                    //var stepConfig = ConfigManager.Instance.configTutorial.GetStep("ClickBuyEnergy");
                     var stepConfig = ConfigManager.Instance.configTutorial.GetStep("ClickBuyEnergy_03");
 
                     if (stepConfig != null)
