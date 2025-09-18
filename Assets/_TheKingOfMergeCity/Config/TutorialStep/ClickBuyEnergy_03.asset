@@ -16,7 +16,7 @@ MonoBehaviour:
   _description: 'Oh no! We''ve run out of energy! <color=#2492F3>Tap the Energy icon!</color>
 
 '
-  _offsetBetweenUITutorialInfoAndCenter: {x: 0, y: 0}
+  _offsetBetweenUITutorialInfoAndCenter: {x: 0, y: 450}
   _showDescription: 1
   _showDescriptionWhenPlay: 1
   _holeSize: {x: 200, y: 200}
