@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ac2c49c3548dd42b4227b66ca5296c, type: 3}
+  m_Name: ClickBuyEnergy_03
+  m_EditorClassIdentifier: 
+  _id: ClickBuyEnergy_03
+  _description: 'Oh no! We''ve run out of energy! Tap the Energy icon!
+
+    <color=#2492F3>Serve</color>
+    it to the customer'
+  _offsetBetweenUITutorialInfoAndCenter: {x: 0, y: 0}
+  _showDescription: 1
+  _showDescriptionWhenPlay: 1
+  _holeSize: {x: 200, y: 200}

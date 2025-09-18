@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using USimpFramework.Utility;
@@ -129,6 +129,7 @@ namespace USimpFramework.UI
                 Debug.LogError("Show popup failed! Cannot find " + typeof(T).Name);
                 return null;
             }
+
 
             if (currentPopup != null)
             {

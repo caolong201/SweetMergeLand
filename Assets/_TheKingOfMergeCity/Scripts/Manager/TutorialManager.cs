@@ -16,6 +16,10 @@ namespace TheKingOfMergeCity
         public TutorialStep currentStep { get; private set; }
 
         List<TutorialStep> steps = new();
+        public void SetStep(TutorialStep step)
+        {
+            currentStep = step;
+        }
 
 
         #region Solution
@@ -99,7 +103,14 @@ namespace TheKingOfMergeCity
         public void PlayStep()
         {
             var config = currentStep.config;
+            //them
+            var uiPopup = UIManager.Instance.GetPopup<UITutorialPopup>();
+            if (uiPopup == null) return;
 
+            if (config is ConfigTutorialClickBuyEnergy buyEnergyStep)
+            {
+                uiPopup.ShowEffect();
+            }
             //Check for each type of config tutorial step
             if (config is ConfigTutorialPuzzleMove configTutorialPuzzleMove)
             {
@@ -152,7 +163,13 @@ namespace TheKingOfMergeCity
 
             if (typeof(T) != currentStep.config.GetType())
                 return;
-
+            //them
+            if (currentStep.config is ConfigTutorialClickBuyEnergy)
+            {
+                var uiPopup = UIManager.Instance.GetPopup<UITutorialPopup>();
+                if (uiPopup != null)
+                    uiPopup.HideEffect();
+            }
 
             if (currentStep is ClickProducePuzzleTutorialStep producePuzzleTutorialStep)
             {

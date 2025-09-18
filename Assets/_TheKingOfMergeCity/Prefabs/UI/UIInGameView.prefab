@@ -25045,6 +25045,7 @@ MonoBehaviour:
   itemMergedVfx: {fileID: 2300698583969146030}
   _inventoryButton: {fileID: 6614578917203156330}
   quantityInventory: {fileID: 6133079740135646238}
+  _energyButton: {fileID: 4097730784976615341}
 --- !u!1 &6153690649652697254
 GameObject:
   m_ObjectHideFlags: 0
@@ -45002,17 +45003,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7343081596919772870}
     m_Modifications:
-    - target: {fileID: 1066576717323564423, guid: 8af570b70924f4a43aa0f6033250f76f, type: 3}
-      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
-      value: 1801810542
-      objectReference: {fileID: 0}
-    - target: {fileID: 3977470315745236644, guid: 8af570b70924f4a43aa0f6033250f76f, type: 3}
-      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
-      value: 1801810542
-      objectReference: {fileID: 0}
     - target: {fileID: 5491511587990818471, guid: 8af570b70924f4a43aa0f6033250f76f, type: 3}
       propertyPath: m_Name
       value: UITopBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 6184929236878941803, guid: 8af570b70924f4a43aa0f6033250f76f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6184929236878941803, guid: 8af570b70924f4a43aa0f6033250f76f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6184929236878941803, guid: 8af570b70924f4a43aa0f6033250f76f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: -292990805252659158}
+    - target: {fileID: 6184929236878941803, guid: 8af570b70924f4a43aa0f6033250f76f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6184929236878941803, guid: 8af570b70924f4a43aa0f6033250f76f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PressBuyEnergy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6184929236878941803, guid: 8af570b70924f4a43aa0f6033250f76f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TheKingOfMergeCity.UIInGameView, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6184929236878941803, guid: 8af570b70924f4a43aa0f6033250f76f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6748773279192923619, guid: 8af570b70924f4a43aa0f6033250f76f, type: 3}
       propertyPath: m_Pivot.x
@@ -45094,14 +45115,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8200306882159746059, guid: 8af570b70924f4a43aa0f6033250f76f, type: 3}
-      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
-      value: 1801810542
-      objectReference: {fileID: 0}
-    - target: {fileID: 8668750927862090867, guid: 8af570b70924f4a43aa0f6033250f76f, type: 3}
-      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
-      value: 1801810542
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -45112,6 +45125,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6748773279192923619, guid: 8af570b70924f4a43aa0f6033250f76f, type: 3}
   m_PrefabInstance: {fileID: 7857470933809654214}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4097730784976615341 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6184929236878941803, guid: 8af570b70924f4a43aa0f6033250f76f, type: 3}
+  m_PrefabInstance: {fileID: 7857470933809654214}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8382843285691373178 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1828056428360335292, guid: 8af570b70924f4a43aa0f6033250f76f, type: 3}

@@ -13,6 +13,7 @@ namespace TheKingOfMergeCity
 {
     using Enum;
     using Config;
+    using TheKingOfMergeCity.Tutorial;
 
     public class UIInGameView : UIViewBase
     {
@@ -56,7 +57,10 @@ namespace TheKingOfMergeCity
 
         [SerializeField] TMP_Text quantityInventory;
         public Button inventoryButton => _inventoryButton;
-    
+        [SerializeField] Button _energyButton;
+        public Button energyButton => _energyButton;
+      
+        bool hasShownEnergyTutorial = false;
         void Start()
         {
             boardFullText.gameObject.SetActive(false);
@@ -64,7 +68,7 @@ namespace TheKingOfMergeCity
             imageSelectorOriginalParentTrans = imageSelector.transform.parent;
             tileBgImagePrefab.gameObject.SetActive(false);
             CreateBackground();
-            
+            CheckEnergyTutorial();
         }
 
 
@@ -94,6 +98,7 @@ namespace TheKingOfMergeCity
 
             UserManager.Instance.onInventoryChanged += UpdateInventory;
 
+
             //Reupdate the external reward puzzle items
             UpdateExtenalRewardPuzzleItems();
             UpdateInventory();
@@ -103,7 +108,14 @@ namespace TheKingOfMergeCity
             if (sceneName != SceneConstants.IN_GAME_SCENE_NAME)
                 ShowSelectorIndicator(false, imageSelectorOriginalParentTrans);
         }
-
+        //t
+        void OnCurrencyBalanceChanged(CurrencyType currencyType)
+        {
+            if (currencyType == CurrencyType.Energy)
+            {
+                CheckEnergyTutorial();
+            }
+        }
         void UpdateInventory()
         {
             var slotDataItems = UserManager.Instance.puzzleInventoryItems;
@@ -157,24 +169,68 @@ namespace TheKingOfMergeCity
 
         void OnDisable()
         {
-            UserManager.Instance.onCurrencyBalanceChanged -= OnCurrencyBalanceChanged;
+            //UserManager.Instance.onCurrencyBalanceChanged -= OnCurrencyBalanceChanged;
             UserManager.Instance.onDecoCanBuild -= OnDecoCanBuild;
             BootManager.Instance.onBeforeSceneLoaded -= OnBeforeSceneLoaded;
+            UserManager.Instance.onCurrencyBalanceChanged -= OnCurrencyBalanceChanged;
         }
 
-        void OnCurrencyBalanceChanged(CurrencyType currencyType)
+        //automatic show
+        //void OnCurrencyBalanceChanged(CurrencyType currencyType)
+        //{
+        //    if (currencyType == CurrencyType.Energy)
+        //    {
+        //        int balance = UserManager.Instance.GetCurrencyBalance(CurrencyType.Energy);
+        //        if (balance == 0)
+        //        {
+        //            UIManager.Instance.ShowPopup<UIBuyEnergyPopup>();
+        //        }
+        //    }
+        //}
+        public void PressBuyEnergy()
         {
-            if (currencyType == CurrencyType.Energy)
+            
+            UIManager.Instance.ShowPopup<UIBuyEnergyPopup>();
+
+            if (TutorialManager.Instance.currentStep != null &&
+                TutorialManager.Instance.currentStep.config is ConfigTutorialClickBuyEnergy)
             {
-                int balance = UserManager.Instance.GetCurrencyBalance(CurrencyType.Energy);
-                if (balance == 0)
+                TutorialManager.Instance.CheckCompleteStep<ConfigTutorialClickBuyEnergy>();
+                UIManager.Instance.HidePopup<UITutorialPopup>();
+            }
+        }
+        void CheckEnergyTutorial()
+        {
+            int energy = UserManager.Instance.GetCurrencyBalance(CurrencyType.Energy);
+
+            if (energy == 0)
+            {
+                if (!UserManager.Instance.hasShownEnergyTutorial)
                 {
+                    //var stepConfig = ConfigManager.Instance.configTutorial.GetStep("ClickBuyEnergy");
+                    var stepConfig = ConfigManager.Instance.configTutorial.GetStep("ClickBuyEnergy_03");
+
+                    if (stepConfig != null)
+                    {
+                        UIManager.Instance.ShowPopup<UITutorialPopup>();
+                        TutorialManager.Instance.SetStep(new NormalTutorialStep(stepConfig));
+                        TutorialManager.Instance.PlayStep();
+                    
+                        UserManager.Instance.hasShownEnergyTutorial.value = true;
+                        UserManager.Instance.hasShownEnergyTutorial.SaveData();
+                    }
+                    else
+                    {
+                        UIManager.Instance.ShowPopup<UIBuyEnergyPopup>();
+                    }
+                }
+                else
+                {
+                    
                     UIManager.Instance.ShowPopup<UIBuyEnergyPopup>();
                 }
             }
         }
-
-
         public void PressProviderItem()
         {
             //Find the first empty slot

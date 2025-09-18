@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using USimpFramework.UI;
@@ -34,6 +34,7 @@ namespace TheKingOfMergeCity
                 originalBgMaskAlpha = bgMaskImage.color.a;
 
             ResetData();
+
         }
 
         public void ShowBlockTouch(bool isShow)
@@ -66,7 +67,6 @@ namespace TheKingOfMergeCity
                 tutorialInfoTrans.position = pos;
                 
                 descriptionText.text = configStep.description;
-
                 //Init
                 ResetData();
 
@@ -146,6 +146,9 @@ namespace TheKingOfMergeCity
                     }
                 }
 
+
+
+
                 var start = firstItem.itemPosition;
                 var end = secondItem.itemPosition;
 
@@ -165,6 +168,8 @@ namespace TheKingOfMergeCity
                 handTrans.gameObject.SetActive(true);
                 handImage.SetAlpha(1);
                 holeImage.gameObject.SetActive(true);
+
+             
 
                 var puzzleController = InGameManager.Instance.puzzlesController;
                 var item = puzzleController.GetPuzzleItem(configClickProducePuzzle.clickPosition);
@@ -191,6 +196,10 @@ namespace TheKingOfMergeCity
                 handTrans.gameObject.SetActive(true);
                 handImage.SetAlpha(1);
                 holeImage.gameObject.SetActive(true);
+
+              
+
+
 
                 if (configServeCustomer.autoDetectServeCustomer)
                 {
@@ -238,8 +247,35 @@ namespace TheKingOfMergeCity
                 holeImage.rectTransform.SetSize(configClickStartInBuildPopup.holeSize);
                 PlayHandClickingAnimation(holeImage.transform.position);
             }
-        }
 
+
+            else if (configStep is ConfigTutorialClickBuyEnergy configClickBuyEnergy)
+            {
+                // Bật tay + vòng tròn highlight
+                handTrans.gameObject.SetActive(true);
+                handImage.SetAlpha(1);
+                holeImage.gameObject.SetActive(true);
+
+                // Lấy UI hiện tại
+                var uiHomeView = UIManager.Instance.currentView as UIInGameView;
+                if (uiHomeView == null || uiHomeView.energyButton == null)
+                {
+                    Debug.LogError("Không tìm thấy EnergyButton trong UIInGameView!");
+                    return;
+                }
+
+                // Hiển thị animation tay click vào nút Energy
+                PlayHandClickingAnimation(uiHomeView.energyButton.transform.position);
+
+                // Đặt vòng highlight vào nút Energy
+                holeImage.transform.position = uiHomeView.energyButton.transform.position;
+                holeImage.rectTransform.SetSize(configClickBuyEnergy.holeSize);
+            }
+        }
+        void OnClickBuyEnergyTutorial()
+        {
+            TutorialManager.Instance.CheckCompleteStep<ConfigTutorialClickBuyEnergy>();
+        }
         void PlayHandClickingAnimation(Vector2 position)
         {
             handTrans.position = position;

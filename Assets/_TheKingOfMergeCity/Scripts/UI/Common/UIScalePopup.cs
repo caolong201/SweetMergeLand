@@ -18,6 +18,8 @@ namespace TheKingOfMergeCity
             boardTrans.DOScale(1, duration).SetEase(Ease.OutBack).From(0.7f);
             canvasGroup.DOFade(1, duration).SetEase(Ease.Linear).From(0f).OnComplete(() => onCompleted?.Invoke());
             canvasGroup.blocksRaycasts = true;
+
+
         }
 
         public override void Hide(bool withTransition = true, System.Action onCompleted =null)

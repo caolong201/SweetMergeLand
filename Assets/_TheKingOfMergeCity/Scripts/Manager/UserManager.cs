@@ -59,13 +59,13 @@ namespace TheKingOfMergeCity
         public bool hasPendingClaimReward { get; private set; }
 
         public bool isMaxLevel { get; private set; }
-        
+
         /// <summary>Must check this if you want to perform animation before the value is updated  </summary>
         public bool isPlayingDecoBuildingFromInGameScene { get; set; }
-        
+
         /// <summary>Must check this if you want to perform the player leveling up animation before the value is updated</summary>
         public bool isPendingPlayPlayerLevelUp { get; set; }
-        
+
         public int oldEnergy { get; private set; }
         public int oldLevel { get; private set; }
         public int oldExp { get; private set; }
@@ -90,13 +90,13 @@ namespace TheKingOfMergeCity
             }
         }
 
-            public void Init()
+        public void Init()
         {
             //Just for testing
             currentBoardLevel = 4;
 
             finishTutorial.LoadData();
-                
+
             puzzleInventoryItems.LoadData();
 
             if (ConfigManager.Instance.configGlobal.skipTutorial)
@@ -200,8 +200,11 @@ namespace TheKingOfMergeCity
             InitRoulette();
 
             isInitialized = true;
+
+
+            hasShownEnergyTutorial.LoadData();
         }
-        
+
         void Update()
         {
             if (!isInitialized)
@@ -234,9 +237,15 @@ namespace TheKingOfMergeCity
             if (Input.GetKeyDown(KeyCode.R))
             {
                 AddCurrencyAmount(CurrencyType.Gem, 100, true, true);
-      
+
             }
         }
+
+
+
+        // Flag: đã từng hiện tutorial BuyEnergy chưa
+        public PlayerPrefsType<bool> hasShownEnergyTutorial { get; private set; } = new("hasShownEnergyTutorial");
+
 
         public void SaveAll()
         {
@@ -804,7 +813,7 @@ namespace TheKingOfMergeCity
 
             rouletteData.LoadData();
 
-            bool needSave = rouletteData.value.CheckReset(configRoulette.watchAdSpinCount, configRoulette.resetCooldownSecond) 
+            bool needSave = rouletteData.value.CheckReset(configRoulette.watchAdSpinCount, configRoulette.resetCooldownSecond)
                 || CheckResetRouletteConfigRewards(false);
             if (needSave)
                 rouletteData.SaveData();
@@ -847,7 +856,7 @@ namespace TheKingOfMergeCity
 
             if (finalReward == null)
                 finalReward = rewards[^1];
-            
+
             //Also claim reward here
             ClaimRewards(new List<ConfigRewardItem>
             {
@@ -864,7 +873,7 @@ namespace TheKingOfMergeCity
             {
                 var configRoulette = ConfigManager.Instance.configRoulette;
                 var configPuzzle = ConfigManager.Instance.configPuzzle;
-                
+
                 rouletteData.value.configRewards.Clear();
 
                 var availableNormalPuzzleIds = configPuzzle.configItems.FindAll(c => c.puzzleType == PuzzleType.Normal);
@@ -873,7 +882,7 @@ namespace TheKingOfMergeCity
                 {
                     if (reward.rewardType == RewardType.PuzzleItem && reward.isRandomPuzzleId)
                     {
-                      
+
                         var randomPuzzleId = availableNormalPuzzleIds[Random.Range(0, availableNormalPuzzleIds.Count)].id;
                         rouletteData.value.configRewards.Add(new ConfigRouletteReward(RewardType.PuzzleItem, randomPuzzleId, reward.puzzleLevel, reward.amount, reward.weight));
                     }
