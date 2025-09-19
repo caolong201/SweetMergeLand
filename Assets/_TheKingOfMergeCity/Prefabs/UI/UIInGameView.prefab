@@ -1340,7 +1340,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 3}
-  m_SizeDelta: {x: 104.6, y: 126.3}
+  m_SizeDelta: {x: 110, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2044591670108821708
 CanvasRenderer:
@@ -2223,7 +2223,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 156, y: 153}
+  m_SizeDelta: {x: 159, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2492980012902921505
 CanvasRenderer:
@@ -25084,7 +25084,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 80.61, y: 81}
+  m_SizeDelta: {x: 85, y: 85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7349414620790824345
 CanvasRenderer:
@@ -30594,10 +30594,10 @@ RectTransform:
   - {fileID: 4605474053995965508}
   m_Father: {fileID: 749604145212663268}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 163.7, y: 150.37}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 75, y: -8}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4314804006498069984
 CanvasRenderer:
@@ -30627,7 +30627,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b483e574024c44d329b6de483a13c0e4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: afc761fa87a00de468bfea98c3cc615c, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -31502,7 +31502,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: -122, y: 230}
-  m_SizeDelta: {x: 156, y: 156}
+  m_SizeDelta: {x: 180, y: 170}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &802318387116239005
 CanvasRenderer:
@@ -31532,8 +31532,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a38c6645c3e1d459abc8fd75ee0c4f4f, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: afc761fa87a00de468bfea98c3cc615c, type: 3}
+  m_Type: 1
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
@@ -36805,7 +36805,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 110, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7367737732382743045
 CanvasRenderer:
@@ -42742,9 +42742,9 @@ RectTransform:
   - {fileID: 8341141059010397361}
   m_Father: {fileID: 8941786538528073462}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 97.3, y: -89.45}
   m_SizeDelta: {x: 154.6, y: 554.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2675555823248051850
@@ -42765,7 +42765,7 @@ MonoBehaviour:
     m_Top: -67
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: -20.52
+  m_Spacing: 6
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
@@ -42959,10 +42959,10 @@ RectTransform:
   - {fileID: 3376054073778720509}
   m_Father: {fileID: 749604145212663268}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 163.7, y: 150.37}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 75, y: -164}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5224912828447380403
 CanvasRenderer:
@@ -42992,7 +42992,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b483e574024c44d329b6de483a13c0e4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: afc761fa87a00de468bfea98c3cc615c, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -43883,7 +43883,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 122, y: 230}
-  m_SizeDelta: {x: 156, y: 156}
+  m_SizeDelta: {x: 180, y: 170}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7585937382973714111
 CanvasRenderer:
@@ -43913,8 +43913,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a38c6645c3e1d459abc8fd75ee0c4f4f, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: afc761fa87a00de468bfea98c3cc615c, type: 3}
+  m_Type: 1
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
@@ -45008,33 +45008,9 @@ PrefabInstance:
       value: UITopBar
       objectReference: {fileID: 0}
     - target: {fileID: 6184929236878941803, guid: 8af570b70924f4a43aa0f6033250f76f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6184929236878941803, guid: 8af570b70924f4a43aa0f6033250f76f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6184929236878941803, guid: 8af570b70924f4a43aa0f6033250f76f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: -292990805252659158}
-    - target: {fileID: 6184929236878941803, guid: 8af570b70924f4a43aa0f6033250f76f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6184929236878941803, guid: 8af570b70924f4a43aa0f6033250f76f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PressBuyEnergy
-      objectReference: {fileID: 0}
-    - target: {fileID: 6184929236878941803, guid: 8af570b70924f4a43aa0f6033250f76f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: TheKingOfMergeCity.UIInGameView, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6184929236878941803, guid: 8af570b70924f4a43aa0f6033250f76f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 6748773279192923619, guid: 8af570b70924f4a43aa0f6033250f76f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
